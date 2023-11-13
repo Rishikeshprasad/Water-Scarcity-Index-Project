@@ -1,0 +1,96 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    
+  
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-34TNETB55R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('set', 'anonymize_ip', true);
+      gtag('set', 'send_page_view', true);
+      gtag('config', 'G-34TNETB55R');
+    </script>
+    <!-- End Google Analytics -->
+    <script>
+      // MDL will update elements marked with MDL classes on page load. Until pageload, hide
+      // content that would otherwise cause a visible flash on screen when it is hidden by MDL.
+       window.onload = function() {
+         var listview = document.getElementById('section--listview');
+         if (listview) listview.style.display = '';
+       }
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pothencode:Water Scarcity Analysis</title>
+    <!-- Load the Roboto font. -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500|Roboto+Slab:100,300|Google+Sans:400&lang=en"
+          rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      
+    
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzvXU2lW6LxRKivaMSQmKhHk9HWh8xFvk&region=&language=&v=3&libraries=drawing,places">
+  </script>
+  <script>
+      window._ee_flag_initialData = {"isDebug": false, "mapsApiKey": "AIzaSyBzvXU2lW6LxRKivaMSQmKhHk9HWh8xFvk", "mapsVersion": "3", "prodRealm": "https://earthengine.googleapis.com", "stagingRealm": "https://earthengine.sandbox.google.com", "appName": "pothencodewater-scarcity-analysis", "ownerId": "cloud/ee-rishinds22", "authClientId": "41408719105-oq5mrd31uv9i8mptnp4trrtc7kl8r911.apps.googleusercontent.com", "authToken": "ya29.c.c0AY_VpZjvisakpOJ_MUYopWBsNSkIetqb7aAnU7ndQ_aC85UpuUhmo7ZzF8GtZgqUM_9B5Il6VA8aZ8zCcIcOBKNKG_dkcZbIbr_XBkHOX0nvOHQ477tekEHixc1RSvVs2lAehBVPsuDZGgLDvwGQuinVDR456rOOrS7oXtClTBHRxqqDcp1oBJ3-5rH-3cM-hL_8SpFAD80fw98fKGxR_c8mR1DxWEN5eAL_D6bYsey1RtjmUy7fzoq2v_JWx7nu71dpkGo7ybn2gZCpGbgGPCDAv2ZyhvHm9ZWnIx6faHTICK07RbMG_HV0DFjBv-o3jOqALZRm0nUcq6V9gKH0pUlS-2CTPXxydlIMQt00JAWATsFkvAml9avL0pt3SPm3I5gNvJ_yFvO4VuoNl2YWAc96ai01ZpRO7SSPPfZKr4AqRbuGfRwUb6AQB6q6TUGybbZr1RONgIyoRQCYRUURuVNW8x_MYqg3dH9eHlRVL_Jg04d78BuLnJ4ajVvW0nekJGIqZwqQuXUw3YR4HdJeBr93RyhbQ6XfOfRwg913Tq3w_7VGjLxFrRVaeCdgDZ-moiHGjnNrEENxLs8EHMiZoep_f-xSN613Cm7fgbIRhbyS-O-xvt5rWf2S-5B0cIg16flBFmfssMn40_waXpv9QYkB7u5Q7ObIbidlpmkOn4de3zz7e7xuRwWy2z-leMYdh4M2ckFqtJha9jjgfnXJJYljxpgwvdgMJMen8hsniFmk_1Q7tjqXJnIMivx-mRd53Mv6awafrYxUltcpywc6k2gU7SJXQFavzOtxr5zpkJ38W1z8xg_xVwsFgYmbYJdkZIto8USew3aaec4R9O33k3cqWuUi0OpbSwSmcRaiYh_a3Vtyl7rdYJvXBYe4sx6njfQXuiStWOVdafpws9o588Xr-6kOh58vyU8_zs4xI_ze_n3RcRmZwRxBcs6i_-V8jtyta_Xet0tlMv0kJmgvRJB2mc2kWFVUr2_ealVk200Yblt-gXrJn_v", "authTokenExpiresInMs": 3599000, "appIdToken": "5XEjZxCZFIafui9pLkwVHJ0WvQIec1twrFbiuNRTuuA:1699852314320"};
+  </script>
+  
+    <link rel="stylesheet" href="//www.earthengine.app/css/app.css">
+
+  
+  <script type="text/javascript" src="//www.earthengine.app/javascript/main.js"></script>
+
+
+  </head>
+  <body class="loading">
+    
+  <div id="header-menu" style="display:none">
+    
+    <a href="https://earthengine.google.com/" target="_blank">About Earth Engine</a>
+    <a href="https://earthengine.google.com/terms/" target="_blank">Terms of Service</a>
+    <a href="https://www.google.com/policies/privacy/" target="_blank">Privacy</a>
+    <a href="https://www.earthengine.app/logout">Sign out</a>
+    
+    <div id="shortcuts-button">Shortcuts (Ctrl-Shift-H or ?)</div>
+  </div>
+
+    
+      <header id="main-header">
+        
+          <div id="logo">
+            <a href="https://www.earthengine.app">
+              <img src="//www.earthengine.app/images/ee-apps.svg"
+                   alt="Google Earth Engine Apps" />
+            </a>
+          </div>
+        
+        
+  <div id="search-container"></div>
+  
+    <div id="right-menu">
+      <i id="header-menu-button" class="material-icons">more_vert</i>
+    </div>
+  
+
+      </header>
+    
+    <main id="content" class="mdl-layout__content">
+      
+  <script>
+    initMenuButton('header-menu-button', 'header-menu');
+    init("https://ee-rishinds22.projects.earthengine.app/javascript/pothencodewater-scarcity-analysis-modules.json");
+  </script>
+
+    </main>
+    
+
+  </body>
+</html>
